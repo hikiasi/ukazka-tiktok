@@ -1,0 +1,11 @@
+.rofl-cursor {
+  position: fixed;
+  width: 190px;
+  height: 258.59px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 999999;
+  transition: transform 0.1s ease;
+  transform: scaleX(-1) rotate(0deg);
+} 
