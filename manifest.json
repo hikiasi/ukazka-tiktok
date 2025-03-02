@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "ROFL Pointer",
+  "version": "1.0",
+  "description": "Курсор — указка с пальцем из тиктока",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/default-16.png",
+      "48": "assets/default-48.png",
+      "128": "assets/default-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": [
+      "assets/default.png",
+      "assets/tuck.wav",
+      "assets/ukazka.wav",
+      "assets/default-16.png",
+      "assets/default-48.png",
+      "assets/default-128.png"
+    ],
+    "matches": ["<all_urls>"]
+  }]
+} 
